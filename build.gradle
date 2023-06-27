@@ -34,7 +34,8 @@ dependencies {
     testImplementation("org.springframework.security:spring-security-test") // 권한 관련
 
 
-    implementation("org.mariadb.jdbc:mariadb-java-client:2.1.2")
+    implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client'
+
 }
 
 tasks.named("jar") {
