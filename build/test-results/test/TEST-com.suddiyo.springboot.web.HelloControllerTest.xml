@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.suddiyo.springboot.web.HelloControllerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-06-29T09:33:02" hostname="ansugyeong-ui-MacBookPro.local" time="0.178">
+  <properties/>
+  <testcase name="hello가_리턴된다()" classname="com.suddiyo.springboot.web.HelloControllerTest" time="0.083"/>
+  <testcase name="helloDto가_리턴된다()" classname="com.suddiyo.springboot.web.HelloControllerTest" time="0.095"/>
+  <system-out><![CDATA[2023-06-29T18:33:01.944+09:00  INFO 82113 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.suddiyo.springboot.web.HelloControllerTest]: HelloControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-06-29T18:33:01.961+09:00  INFO 82113 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.suddiyo.springboot.Application for test class com.suddiyo.springboot.web.HelloControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.6)
+
+2023-06-29T18:33:01.991+09:00  INFO 82113 --- [    Test worker] c.s.springboot.web.HelloControllerTest   : Starting HelloControllerTest using Java 17.0.2 with PID 82113 (started by ahnsugyeong in /Users/ahnsugyeong/Desktop/2023/springboot-webservice)
+2023-06-29T18:33:01.991+09:00  INFO 82113 --- [    Test worker] c.s.springboot.web.HelloControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2023-06-29T18:33:02.169+09:00  INFO 82113 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-06-29T18:33:02.204+09:00  INFO 82113 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3d3709d0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4ed761dc, org.springframework.security.web.context.SecurityContextHolderFilter@4f86cd50, org.springframework.security.web.header.HeaderWriterFilter@1f9ec3e7, org.springframework.security.web.csrf.CsrfFilter@1940bacd, org.springframework.security.web.authentication.logout.LogoutFilter@457f43a2, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@14d44e72, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@5d46f4a3, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@2b097d19, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@b549c4a, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@578081e5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@538c90bf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@62bcfa01, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6c1f1c03, org.springframework.security.oauth2.client.web.OAuth2AuthorizationCodeGrantFilter@73790bb5, org.springframework.security.web.access.ExceptionTranslationFilter@7508912e, org.springframework.security.web.access.intercept.AuthorizationFilter@6f8fa77a]
+2023-06-29T18:33:02.235+09:00  INFO 82113 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-06-29T18:33:02.235+09:00  INFO 82113 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-06-29T18:33:02.236+09:00  INFO 82113 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-06-29T18:33:02.244+09:00  INFO 82113 --- [    Test worker] c.s.springboot.web.HelloControllerTest   : Started HelloControllerTest in 0.279 seconds (process running for 5.951)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - PostsRepositoryTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>PostsRepositoryTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.suddiyo.springboot.domain.posts.html">com.suddiyo.springboot.domain.posts</a> &gt; PostsRepositoryTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.373s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">BaseTimeEntity_등록()</td>
+<td class="success">0.011s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">게시글저장_불러오기()</td>
+<td class="success">0.362s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>18:32:57.156 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Neither @ContextConfiguration nor @ContextHierarchy found for test class [PostsRepositoryTest]: using SpringBootContextLoader
+18:32:57.160 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader -- Could not detect default resource locations for test class [com.suddiyo.springboot.domain.posts.PostsRepositoryTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+18:32:57.161 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.suddiyo.springboot.domain.posts.PostsRepositoryTest]: PostsRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:32:57.186 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Using ContextCustomizers for test class [PostsRepositoryTest]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
+18:32:57.266 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider -- Identified candidate component class: file [/Users/ahnsugyeong/Desktop/2023/springboot-webservice/build/classes/java/main/com/suddiyo/springboot/Application.class]
+18:32:57.267 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.suddiyo.springboot.Application for test class com.suddiyo.springboot.domain.posts.PostsRepositoryTest
+18:32:57.379 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Using TestExecutionListeners for test class [PostsRepositoryTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, WithSecurityContextTestExecutionListener, EventPublishingTestExecutionListener, ReactorContextTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+18:32:57.380 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener -- Before test class: class [PostsRepositoryTest], class annotated with @DirtiesContext [false] with mode [null]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.6)
+
+2023-06-29T18:32:57.693+09:00  INFO 82113 --- [    Test worker] c.s.s.domain.posts.PostsRepositoryTest   : Starting PostsRepositoryTest using Java 17.0.2 with PID 82113 (started by ahnsugyeong in /Users/ahnsugyeong/Desktop/2023/springboot-webservice)
+2023-06-29T18:32:57.694+09:00  INFO 82113 --- [    Test worker] c.s.s.domain.posts.PostsRepositoryTest   : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2023-06-29T18:32:58.350+09:00  INFO 82113 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-29T18:32:58.409+09:00  INFO 82113 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 2 JPA repository interfaces.
+2023-06-29T18:32:58.828+09:00  INFO 82113 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-29T18:32:59.037+09:00  INFO 82113 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:2e1a7521-4d5b-4fe3-aca5-1e089bc70088 user=SA
+2023-06-29T18:32:59.039+09:00  INFO 82113 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-29T18:32:59.160+09:00  INFO 82113 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-29T18:32:59.225+09:00  INFO 82113 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-06-29T18:32:59.541+09:00  INFO 82113 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: drop table if exists member cascade 
+Hibernate: drop table if exists posts cascade 
+Hibernate: create table member (id bigint generated by default as identity, email varchar(255) not null, name varchar(255) not null, picture varchar(255), role varchar(255) not null, primary key (id))
+Hibernate: create table posts (id bigint generated by default as identity, created_date timestamp(6), modified_date timestamp(6), author varchar(255), content TEXT not null, title varchar(500) not null, primary key (id))
+2023-06-29T18:33:00.178+09:00  INFO 82113 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-29T18:33:00.184+09:00  INFO 82113 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-29T18:33:00.770+09:00  WARN 82113 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-29T18:33:00.859+09:00  INFO 82113 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-06-29T18:33:01.116+09:00  INFO 82113 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5d1907fb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6079d219, org.springframework.security.web.context.SecurityContextHolderFilter@13e6ab86, org.springframework.security.web.header.HeaderWriterFilter@54d116d5, org.springframework.security.web.authentication.logout.LogoutFilter@2bfe4df9, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@19240b9, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@5471342, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@66450129, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4ed90b04, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@18b88f7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4dfe56dc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@686ace1f, org.springframework.security.web.access.ExceptionTranslationFilter@31d791c0, org.springframework.security.web.access.intercept.AuthorizationFilter@713c8cbb]
+2023-06-29T18:33:01.356+09:00  INFO 82113 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:2e1a7521-4d5b-4fe3-aca5-1e089bc70088'
+2023-06-29T18:33:01.551+09:00  INFO 82113 --- [    Test worker] c.s.s.domain.posts.PostsRepositoryTest   : Started PostsRepositoryTest in 4.116 seconds (process running for 5.258)
+Hibernate: insert into posts (id, author, content, created_date, modified_date, title) values (default, ?, ?, ?, ?, ?)
+Hibernate: select p1_0.id,p1_0.author,p1_0.content,p1_0.created_date,p1_0.modified_date,p1_0.title from posts p1_0
+Hibernate: select p1_0.id,p1_0.author,p1_0.content,p1_0.created_date,p1_0.modified_date,p1_0.title from posts p1_0
+Hibernate: delete from posts where id=?
+Hibernate: insert into posts (id, author, content, created_date, modified_date, title) values (default, ?, ?, ?, ?, ?)
+Hibernate: select p1_0.id,p1_0.author,p1_0.content,p1_0.created_date,p1_0.modified_date,p1_0.title from posts p1_0
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; createDate = 2023-06-29T18:33:01.929633, modifiedDate = 2023-06-29T18:33:01.929633
+Hibernate: select p1_0.id,p1_0.author,p1_0.content,p1_0.created_date,p1_0.modified_date,p1_0.title from posts p1_0
+Hibernate: delete from posts where id=?
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.4</a> at 2023. 6. 29. 오후 6:33:03</p>
+</div>
+</div>
+</body>
+</html>
