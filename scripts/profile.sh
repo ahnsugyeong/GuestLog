@@ -14,11 +14,11 @@ function find_idle_profile() {
   fi
 
   if [ ${CURRENT_PROFILE} == real1 ]
-    then
-      IDLE_PROFILE=real2
-    else
-      IDLE_PROFILE=real1
-    fi
+  then
+    IDLE_PROFILE=real2
+  else
+    IDLE_PROFILE=real1
+  fi
 
   # 스프링 부트 프로젝트를 이 profile로 연결하기 위해 반환
   echo "${IDLE_PROFILE}"
@@ -36,10 +36,6 @@ function find_idle_port() {
       else
         echo "8083"
       fi
-
-
-
-
 }
 
 
