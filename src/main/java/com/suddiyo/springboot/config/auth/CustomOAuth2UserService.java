@@ -4,6 +4,7 @@ import com.suddiyo.springboot.config.auth.dto.OAuthAttributes;
 import com.suddiyo.springboot.config.auth.dto.SessionUser;
 import com.suddiyo.springboot.domain.user.Member;
 import com.suddiyo.springboot.domain.user.MemberRepository;
+import com.suddiyo.springboot.domain.user.Role;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -63,6 +64,7 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
         Member member = userRepository.findByEmail(attributes.getEmail())
                 .map(entity -> entity.update(attributes.getName(), attributes.getPicture()))
                 .orElse(attributes.toEntity());
+        member.updateRoleKey(Role.USER);
         return userRepository.save(member);
     }
 }

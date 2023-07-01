@@ -3,6 +3,8 @@ package com.suddiyo.springboot.service.posts;
 
 import com.suddiyo.springboot.domain.posts.Posts;
 import com.suddiyo.springboot.domain.posts.PostsRepository;
+import com.suddiyo.springboot.domain.user.Member;
+import com.suddiyo.springboot.domain.user.MemberRepository;
 import com.suddiyo.springboot.web.dto.PostsResponseDto;
 import com.suddiyo.springboot.web.dto.PostsSaveRequestDto;
 import com.suddiyo.springboot.web.dto.PostsUpdateRequestDto;
@@ -11,16 +13,20 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 @Service
 public class PostsService {
     private final PostsRepository postsRepository;
+    private final MemberRepository memberRepository;
 
     @Transactional
     public Long save(PostsSaveRequestDto requestDto) {
-        return postsRepository.save(requestDto.toEntity()).getId();
+        Member findMember = memberRepository.findById(requestDto.getMemberId()).orElse(null);
+        return postsRepository.save(requestDto.toEntity(findMember)).getId();
     }
 
     @Transactional

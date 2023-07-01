@@ -29,20 +29,39 @@ public class IndexController {
 //        SessionUser user = (SessionUser) httpSession.getAttribute("user");
         if(user != null) {
             model.addAttribute("userName", user.getName());
+            model.addAttribute("profileImg", user.getPicture());
+            model.addAttribute("email", user.getEmail());
         }
 
         return "index";
     }
 
     @GetMapping("/posts/save")
-    public String postsSave() {
+    public String postsSave(Model model, @LoginUser SessionUser user) {
+        model.addAttribute("userName", user.getName());
         return "posts-save";
     }
 
-    @GetMapping("/posts/update/{id}")
-    public String postsUpdate(@PathVariable Long id, Model model) {
+    @GetMapping("/posts/{id}")
+    public String posts(@PathVariable Long id, Model model, @LoginUser SessionUser user) {
         PostsResponseDto dto = postService.findById(id);
         model.addAttribute("post", dto);
+
+        if(user != null && dto.getMemberId().equals(user.getMemberId())) {
+            model.addAttribute("isAuthor", true);
+        }
+
+        return "posts-main";
+    }
+
+    @GetMapping("/posts/update/{id}")
+    public String postsUpdate(@PathVariable Long id, @LoginUser SessionUser user, Model model) {
+        PostsResponseDto dto = postService.findById(id);
+        model.addAttribute("post", dto);
+
+        if (!dto.getMemberId().equals(user.getMemberId())) {
+            return "posts-main";
+        }
 
         return "posts-update";
     }

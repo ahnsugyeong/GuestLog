@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Member {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "member_id")
     private Long id;
 
     @Column(nullable = false)
@@ -42,6 +43,10 @@ public class Member {
 
     public String getRoleKey() {
         return this.role.getKey();
+    }
+
+    public void updateRoleKey(Role role) {
+        this.role = role;
     }
 
 }

@@ -1,6 +1,7 @@
 package com.suddiyo.springboot.domain.posts;
 
 import com.suddiyo.springboot.domain.BaseTimeEntity;
+import com.suddiyo.springboot.domain.user.Member;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
@@ -23,11 +24,16 @@ public class Posts extends BaseTimeEntity {
 
     private String author;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "member_id")
+    private Member member;
+
     @Builder
-    public Posts(String title, String content, String author) {
+    public Posts(String title, String content, String author, Member member) {
         this.title = title;
         this.content = content;
         this.author = author;
+        this.member = member;
     }
 
     public void update(String title, String content) {

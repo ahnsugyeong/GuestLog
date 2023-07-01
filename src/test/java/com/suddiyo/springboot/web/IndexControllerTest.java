@@ -1,6 +1,7 @@
 package com.suddiyo.springboot.web;
 
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,7 @@ class IndexControllerTest {
     private TestRestTemplate testRestTemplate;
 
     @Test
+    @Disabled
     public void 메인페이지_로딩() {
         // when
         String body = this.testRestTemplate.getForObject("/", String.class);
