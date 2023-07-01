@@ -18,8 +18,8 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
-//                .requiresChannel().anyRequest().requiresSecure() // SSL 사용 설정
-//                .and()
+                .requiresChannel().anyRequest().requiresSecure() // SSL 사용 설정
+                .and()
                 .csrf().disable()   // REST API 기반이므로 stateless. csrf 필요 X
                 .headers().frameOptions().disable() // HTML 삽입 취약점 방어로, iframe, object 등에 삽입해서 제어하거나 클릭하는 공격을 방지하는 옵션 삭제. spring 통해서 h2 console 확인할 때 사용
                 .and()
