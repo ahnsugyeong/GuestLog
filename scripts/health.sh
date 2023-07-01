@@ -9,12 +9,12 @@ IDLE_PORT=$(find_idle_port)
 
 echo "> Health Check Start!"
 echo "> IDLE_PORT: $IDLE_PORT"
-echo "> curl -s http://localhost:$IDLE_PORT/profile "
+echo "> curl -s https://suddiyo-springboot-webservice.site:$IDLE_PORT/profile "
 sleep 10
 
 for RETRY_COUNT in {1..10}
 do
-  RESPONSE=$(curl -s http://localhost:${IDLE_PORT}/profile)
+  RESPONSE=$(curl -s https://suddiyo-springboot-webservice.site:${IDLE_PORT}/profile)
   UP_COUNT=$(echo ${RESPONSE} | grep 'real' | wc -l)
 
   # 엔진엑스와 연결되지 않은 포트로 스프링 부트가 잘 수행되었는지 체크
