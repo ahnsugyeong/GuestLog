@@ -1,27 +1,35 @@
 {{>layout/header}}
 
-<div class="container" style="margin-top: 30px;">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <h3 style="text-align: center">🐰️ 게시글 🐰️</h3>
+<div class="container d-flex justify-content-center align-items-center">
+    <div style="width: 85%;margin-top: 50px;">
+        <form>
+            <div class="form-group">
+                <h3 class="card-title">{{post.title}}</h3>
+            </div>
 
-            <form>
-                <div class="form-group">
-                    <label for="title">제목</label>
-                    <input type="text" class="form-control" id="title" value="{{post.title}}" readonly>
+            <div class="form-group">
+                <div class="d-flex align-items-center">
+                    <div style="width: 30px;height: 30px;border-radius: 50%;overflow: hidden; margin-right: 10px;">
+                        <img src="{{post.picture}}" alt="프로필 사진"
+                             style="width: 100%;height: 100%;object-fit: cover;">
+                    </div>
+                    <span class="author-info">
+                    <span class="author-name" style="font-size: 13px;">{{post.author}}</span>
+                    <span class="text-muted ml-2" style="font-size: 10px;">{{post.createdDate}}</span>
+                </span>
                 </div>
-                <div class="form-group">
-                    <label for="author">작성자</label>
-                    <input type="text" class="form-control" id="author" value="{{post.author}}" readonly>
-                </div>
-                <div class="form-group">
-                    <label for="content">내용</label>
-                    <textarea class="form-control" id="content" readonly>{{post.content}}</textarea>
-                </div>
-            </form>
+            </div>
 
-            <div style="margin-bottom: 5px;">
-                <a href="/" role="button" class="btn btn-secondary" style="margin-right: 5px;">목록으로</a>
+            <hr>
+
+            <pre class="card-text">{{post.content}}</pre>
+
+        </form>
+
+        <hr>
+
+        <div style="margin-bottom: 5px;" class="d-flex justify-content-between">
+            <div>
                 {{#isAuthor}}
                     <a href="/posts/update/{{post.id}}" role="button" class="btn btn-primary"
                        style="margin-right: 5px;">수정</a>
@@ -29,10 +37,12 @@
                 {{/isAuthor}}
             </div>
 
-            <input type="hidden" id="id" value="{{post.id}}">
+            <div>
+                <a href="/" role="button" class="btn btn-secondary">목록으로</a>
+            </div>
         </div>
+
+        <input type="hidden" id="id" value="{{post.id}}">
     </div>
 </div>
-
-
 {{>layout/footer}}

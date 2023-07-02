@@ -36,5 +36,7 @@ public class PostsSaveRequestDto {
     public void updateMemberId(Long memberId) {
         this.memberId = memberId;
     }
-
+    public void updateAuthor(String author) {
+        this.author = author;
+    }
 }

@@ -4,6 +4,8 @@ import com.suddiyo.springboot.domain.posts.Posts;
 import lombok.Getter;
 import lombok.ToString;
 
+import java.time.format.DateTimeFormatter;
+
 @Getter
 @ToString
 public class PostsResponseDto {
@@ -12,6 +14,9 @@ public class PostsResponseDto {
     private String content;
     private String author;
     private Long memberId;
+    private String picture;
+    private String createdDate;
+
 
 
 
@@ -21,5 +26,7 @@ public class PostsResponseDto {
         this.content = entity.getContent();
         this.author = entity.getAuthor();
         this.memberId = entity.getMember().getId();
+        this.picture = entity.getMember().getPicture();
+        this.createdDate = entity.getCreatedDate().format(DateTimeFormatter.ofPattern("yyyy. M. d. a h:mm"));
     }
 }
