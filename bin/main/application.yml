@@ -3,10 +3,6 @@ server:
   servlet:
     encoding:
       force: true
-  ssl:
-    key-store: classpath:ssl/keystore.p12
-    key-store-password: 12345678
-    key-store-type: PKCS12
 
 spring:
   jpa:
@@ -17,7 +13,6 @@ spring:
           org.hibernate.dialect.H2Dialect
   session:
     store-type: jdbc
-
 
   h2:
     console:

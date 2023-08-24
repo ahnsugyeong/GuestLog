@@ -1,38 +1,77 @@
 {{>layout/header}}
-<h1 style="margin: 20px;">Springboot Web Service 🌱</h1>
+
 <div class="col-md-12" style="padding: 20px;">
     <div class="row">
         <div class="col-md-6">
-            <a href="/posts/save" role="button" class="btn btn-primary" style="margin-right: 10px;margin-bottom: 10px;">글 등록</a>
             {{#userName}}
-                <p style="margin-bottom: 10px;">Logged in as: <span id="member">{{userName}}</span></p>
-                <a href="/logout" class="btn btn-info active" role="button">Logout</a>
+                <div class="user-info">
+                    <link rel="stylesheet" href="/css/index.css">
+                    <div class="row align-items-center">
+                        <div class="col-auto">
+                            <div class="profile-picture-container">
+                                <img src="{{profileImg}}" alt="프로필 사진" class="profile-picture">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p class="user-name">{{userName}}</p>
+                            <p class="user-email">{{email}}</p>
+                        </div>
+                        <div class="col-auto">
+                            <a href="/logout" class="btn btn-info" role="button">로그아웃</a>
+                        </div>
+                    </div>
+                </div>
             {{/userName}}
+
             {{^userName}}
-                <a href="/oauth2/authorization/google" class="btn btn-success active" role="button" style="margin-right: 10px;margin-bottom: 10px;">Google Login</a>
-                <a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button" style="margin-right: 10px;margin-bottom: 10px;">Naver Login</a>
+                <a href="/oauth2/authorization/google" class="btn btn-success active" role="button"
+                   style="margin-right: 10px;margin-bottom: 10px;">Google Login</a>
+                <a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button"
+                   style="margin-right: 10px;margin-bottom: 10px;">Naver Login</a>
             {{/userName}}
+
+        </div>
+        <div class="col-md-6 text-right">
+            {{#userName}}
+                <div class="col-auto" style="margin-top: 20px;">
+                    <a href="/posts/save" role="button" class="btn btn-primary" style="margin-right: 5px;">글 작성</a>
+                </div>
+            {{/userName}}
+
         </div>
     </div>
 
     <!-- 목록 출력 영역 -->
-    <table class="table table-horizontal table-bordered" style="margin-top: 20px;">
-        <thead class="thead-strong">
+    <table class="table table-hover" style="margin-top: 20px;">
+
         <tr>
-            <th>게시글 ID</th>
+            <th>번호</th>
             <th>제목</th>
             <th>작성자</th>
-            <th>최종 수정일</th>
+            <th>날짜</th>
         </tr>
         </thead>
         <tbody id="tbody">
         {{#posts}}
             <tr>
-                <td>{{id}}</td>
-                <td><a href="/posts/update/{{id}}">{{title}}</a></td>
-                <td>{{author}}</td>
-                <td>{{modifiedDate}}</td>
+                <td><a href="/posts/{{id}}" style="color: black;text-decoration: none;font-size: 15px">{{id}}</a></td>
+                <td style="width:40%"><a href="/posts/{{id}}" style="color: black;text-decoration: none;font-size: 15px">{{title}}</a></td>
+                <td>
+                    <div class="row align-items-center">
+                        <div class="col-auto" style="padding-right: 0;">
+                            <div style="width: 30px;height: 30px;border-radius: 50%;overflow: hidden;">
+                                <img src="{{picture}}" alt="프로필 사진" style="width: 100%;height: 100%;object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="col" style="padding-right: 0;font-size: 15px">
+                            {{author}}
+                        </div>
+                    </div>
+                </td>
+                <td style="font-size: 15px">{{createdDate}}</td>
+
             </tr>
+
         {{/posts}}
         </tbody>
     </table>

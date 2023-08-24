@@ -26,9 +26,9 @@ var main = {
             dataType: 'json',
             contentType: 'application/json; charset=utf-8',
             data: JSON.stringify(data)
-        }).done(function () {
+        }).done(function (response) {
             alert('글이 등록되었습니다.');
-            window.location.href = '/';
+            window.location.href = '/posts/' + response; // 등록한 글로 리다이렉트
         }).fail(function (error) {
             alert(JSON.stringify(error));
         });
@@ -49,7 +49,7 @@ var main = {
             data: JSON.stringify(data)
         }).done(function () {
             alert('글이 수정되었습니다.');
-            window.location.href = '/';
+            window.location.href = '/posts/' + id;
         }).fail(function (error) {
             alert(JSON.stringify(error));
         });

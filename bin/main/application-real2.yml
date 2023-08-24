@@ -1,9 +1,5 @@
 server:
   port: 8083
-  ssl:
-    key-store: classpath:ssl/keystore.p12
-    key-store-password: 12345678
-    key-store-type: PKCS12
 
 spring:
   profiles:
