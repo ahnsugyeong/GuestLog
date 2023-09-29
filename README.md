@@ -1,9 +1,8 @@
 # Springboot + AWS Web Service 🌱
 > 참고 : 스프링부트와 AWS로 혼자 구현하는 웹 서비스 (프리렉 / 이동욱 지음)
 
-아래 링크를 통해 배포된 웹 서비스를 확인할 수 있습니다. 🦦
-
-https://suddiyo-springboot-webservice.site
+~~[https://suddiyo-springboot-webservice.site](https://suddiyo-springboot-webservice.site)~~ 🚫
+👻 현재 서버는 닫혀 있습니다.
 
 
 
